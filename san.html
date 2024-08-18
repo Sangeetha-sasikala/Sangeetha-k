@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/san.css" type="text/css">
+</head>
+<body>
+    <div class="reg">
+        <center>
+        <h3>meter to inches</h3>
+        
+            <div class="input">
+                <input type="text" id="input" placeholder="length in m">
+            </div>
+            
+            <div class="con">
+                <button type="submit" onclick=convert() id="inches">convert meter to inches</button>
+            </div>
+            
+            <div id="result">
+
+            </div>
+        
+    </div>
+    <script>
+        function convert(){
+       
+            let cmval=Number(document.getElementById("input").value)
+            let inchval=cmval*39.37
+
+            let result=document.getElementById("result")
+            result.innerHTML=inchval.toFixed(3) + " inches"
+        }
+    </script>
+</body>
